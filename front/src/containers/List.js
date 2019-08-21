@@ -10,25 +10,36 @@ class List extends Component {
 
   componentDidMount() {
     console.log("did mount");
-    axios
-      .get("http://localhost:4000/villes")
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
+    setTimeout(() => {
+      axios
+        .get("http://localhost:4000/todos")
+        .then(res => {
+          console.log(res);
+          this.setState(prevState => ({
+            ...prevState,
+            loading: false,
+            list: res.data
+          }));
+        })
+        .catch(err => console.log(err));
+    }, 1000);
   }
 
   render() {
     let list;
 
-    if (this.state.list.length === 0 && this.state.loading) {
-      list = "Loading";
-    } else if (this.state.list.length === 0 && !this.state.loading) {
-      list = "Nothing to display";
+    if (this.state.loading) {
+      list = "Loading...";
     } else {
-      list = (
-        <ul>
-          <ItemSmall data={{ name: 1 }} />
-        </ul>
-      );
+      if (this.state.list.length === 0) {
+        list = "Nothing to display";
+      } else {
+        list = (
+          <ul>
+            <ItemSmall data={{ name: 1 }} />
+          </ul>
+        );
+      }
     }
 
     return <div>{list}</div>;

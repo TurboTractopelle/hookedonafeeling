@@ -1,6 +1,37 @@
 body {
   background-color: #282c34;
   color: #fff;
+}
+
+header {
+  background: #a20015;
+  padding: 0.5rem 1rem;
+  display: flex;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+header .search {
+  border: solid 1px #ccc;
+  padding: 0 0.5rem;
+}
+
+header .menu .logo {
+  margin: 0 1rem;
+}
+
+header .menu .menu-title {
+  margin: 0 1rem;
+}
+
+header .app-title {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.5rem;
+}
+
+main {
   padding: 2rem;
 }
 
