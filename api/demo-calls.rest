@@ -7,6 +7,10 @@ GET {{host}}/
 POST {{host}}/villes
 Content-Type: application/json
 
+< ./src/fixtures/villes.json
+
 ### Ville listing
 GET {{host}}/villes
 
+### empty db
+POST {{host}}/dump
