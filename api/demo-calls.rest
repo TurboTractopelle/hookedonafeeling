@@ -1,0 +1,12 @@
+@host = http://localhost:3000
+
+### test home
+GET {{host}}/
+
+### Ville creation
+POST {{host}}/villes
+Content-Type: application/json
+
+### Ville listing
+GET {{host}}/villes
+

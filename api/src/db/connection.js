@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const chalk = require("chalk");
 
-const url = "mongodb://192.168.99.100/27017";
+const url = "mongodb://192.168.99.100:27017/villes";
 
 const connection = mongoose.createConnection(url, {
   connectTimeoutMS: 5000,
