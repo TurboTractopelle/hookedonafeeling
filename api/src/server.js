@@ -1,6 +1,6 @@
 const chalk = require("chalk");
 const setupServer = require("./app");
-const PORT = 3000;
+const PORT = 4000;
 const server = setupServer();
 const connection = require("./db/connection");
 
