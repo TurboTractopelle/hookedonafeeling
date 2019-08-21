@@ -1,5 +1,12 @@
 const restify = require("restify");
 const setupVilleRoutes = require("./controllers/villes");
+const corsMiddleware = require("restify-cors-middleware");
+
+const cors = corsMiddleware({
+  origins: ["*"],
+  allowHeaders: ["Authorization"],
+  exposeHeaders: ["Authorization"]
+});
 
 function setupServer() {
   const server = restify.createServer({ name: "API hook" });
@@ -14,6 +21,9 @@ function setupServer() {
 
   server.use(restify.plugins.queryParser({ mapParams: false }));
   server.use(restify.plugins.jsonBodyParser());
+
+  server.pre(cors.preflight);
+  server.use(cors.actual);
 
   function getHome(req, res, next) {
     res.send("home test ok");
