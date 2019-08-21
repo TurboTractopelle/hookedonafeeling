@@ -13,7 +13,7 @@ const Todo = connection.model("Todo", todoSchema);
 
 async function search() {
   const data = await this.find({}, {}, { sort: { name: 1 } });
-  return data.length > 0 ? data : "no todo yet";
+  return [];
 }
 
 async function dump() {
