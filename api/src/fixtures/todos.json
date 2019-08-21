@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Paris",
+    "status": false
+  },
+  {
+    "name": "Lyon",
+    "status": "true"
+  }
+]

@@ -1,5 +1,5 @@
 const restify = require("restify");
-const setupVilleRoutes = require("./controllers/villes");
+const setupTodosRoutes = require("./controllers/todos");
 const corsMiddleware = require("restify-cors-middleware");
 
 const cors = corsMiddleware({
@@ -10,9 +10,7 @@ const cors = corsMiddleware({
 
 function setupServer() {
   const server = restify.createServer({ name: "API hook" });
-  setupVilleRoutes(server);
-
-  server.get("/", getHome);
+  setupTodosRoutes(server);
 
   server.pre(restify.plugins.pre.dedupeSlashes());
   server.pre(restify.plugins.pre.sanitizePath());
@@ -25,10 +23,6 @@ function setupServer() {
   server.pre(cors.preflight);
   server.use(cors.actual);
 
-  function getHome(req, res, next) {
-    res.send("home test ok");
-    next;
-  }
   return server;
 }
 

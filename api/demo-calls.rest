@@ -1,16 +1,16 @@
-@host = http://localhost:3000
+@host = http://localhost:4000
 
 ### test home
 GET {{host}}/
 
 ### Ville creation
-POST {{host}}/villes
+POST {{host}}/todos
 Content-Type: application/json
 
-< ./src/fixtures/villes.json
+< ./src/fixtures/todos.json
 
-### Ville listing
-GET {{host}}/villes
+### todos listing
+GET {{host}}/todos
 
 ### empty db
 POST {{host}}/dump
