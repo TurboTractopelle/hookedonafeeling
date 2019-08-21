@@ -10,10 +10,10 @@ villeSchema.statics.search = search;
 
 const Ville = connection.model("Ville", villeSchema);
 
-async function search() {
+function search() {
   return "plein de villes";
-  const data = await this.find({}, { name: 1 }, { sort: { name: 1 } });
-  return data.length > 0 ? data : "no ville yet";
+  /*const data = await this.find({}, { name: 1 }, { sort: { name: 1 } });
+  return data.length > 0 ? data : "no ville yet";*/
 }
 
 module.export = Ville;

@@ -6,9 +6,15 @@ function setupVillesRoutes(server) {
 }
 
 async function getVilles(req, res, next) {
-  const villes = await Ville.search();
-  res.send(villes);
-  next();
+  try {
+    const villes = await Ville.search();
+    res.send(villes);
+    next();
+  } catch (error) {
+    console.log("error getVilles");
+    res.send(error);
+    next();
+  }
 }
 
 async function postVilles(req, res, next) {
