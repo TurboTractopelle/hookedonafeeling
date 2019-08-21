@@ -37,13 +37,28 @@ main {
   position: relative;
 }
 
-.Menu {
+.Layout {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+}
+
+.Layout .Menu {
+  position: absolute;
+  z-index: 10;
+  background: #333;
+  min-height: 100vh;
+}
+
+.shadow {
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+  width: 100%;
 }
 
 ul {

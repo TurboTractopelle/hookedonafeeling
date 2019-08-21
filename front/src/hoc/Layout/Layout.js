@@ -6,7 +6,7 @@ export default class Layout extends Component {
     return (
       <div className="Layout">
         <Menu />
-
+        <div className="shadow" />
         <main className="main-content">
           <h1>React Hooks</h1>
           {this.props.children}
