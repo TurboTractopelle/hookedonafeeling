@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 const chalk = require("chalk");
 
-const url = "mongodb://192.168.99.100:27017/villes";
+const url = "mongodb://192.168.99.100:27017/studio";
 // const url = "mongodb://192.168.99.100:27017/villes";
 // const url = "mongodb://localhost/villes";
 
 const options = {
-  connectTimeoutMS: 5000,
-  reconnectInterval: 100,
-  useCreateIndex: true,
-  useNewUrlParser: true
+	connectTimeoutMS: 5000,
+	reconnectInterval: 100,
+	useCreateIndex: true,
+	useNewUrlParser: true
 };
 
 mongoose.connect(url, options);

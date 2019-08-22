@@ -1,0 +1,9 @@
+// MONGO
+docker run -d --name mongo -p 27017:27017 mongo
+
+
+// STRUCTURE
+Hp sans menu, auth 
+
+Menu haut statique
+Menu Latéral à 2 niveaux 

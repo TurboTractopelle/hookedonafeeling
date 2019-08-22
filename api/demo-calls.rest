@@ -3,7 +3,7 @@
 ### test home
 GET {{host}}/
 
-### Ville creation
+### todos creation
 POST {{host}}/todos
 Content-Type: application/json
 
