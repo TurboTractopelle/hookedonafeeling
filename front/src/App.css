@@ -8,7 +8,6 @@ header {
 	padding: 0.5rem 1rem;
 	display: flex;
 	align-items: center;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 header .search {
@@ -48,21 +47,43 @@ main {
 
 main .MainMenu {
 	background: #333;
+	display: flex;
+}
+
+main .MainMenu > div {
+	padding: 1rem;
+}
+
+main .MainMenu .primary {
+	background: #333;
+}
+
+main .MainMenu .primary ul {
+	display: flex;
+	flex-direction: column;
+}
+
+main .MainMenu .primary ul li a {
+	display: inline-block;
+	font-size: 2rem;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	text-decoration: none;
+	padding: 0.2rem 1rem;
+	border-radius: 5px;
+}
+
+main .MainMenu .primary ul li a:hover {
+	color: #a20015;
+}
+
+main .MainMenu .primary ul li a.active {
+	background: rgba(255, 255, 255, 0.9);
+	color: #a20015;
 }
 
 ul {
 	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-ul li {
-	border: solid 1px #ccc;
-	padding: 1rem;
-	margin-bottom: 0.5rem;
-}
-
-ul li h2 {
 	margin: 0;
 	padding: 0;
 }
