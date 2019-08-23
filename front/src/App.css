@@ -63,15 +63,30 @@ main .MainMenu .primary ul {
 	flex-direction: column;
 }
 
-main .MainMenu .primary ul li a,
-main .MainMenu .primary ul li .link {
+main .MainMenu .primary ul li {
 	display: inline-block;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
 	text-decoration: none;
-	padding: 0.2rem 1rem;
+	padding: 0;
 	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+main .MainMenu .primary ul li a {
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+	padding: 0.2rem 1rem;
+	margin-bottom: 1rem;
+}
+main .MainMenu .primary ul li span {
+	font-size: 0.9rem;
+	text-transform: uppercase;
 }
 
 main .MainMenu .primary ul li a:hover {
@@ -79,8 +94,8 @@ main .MainMenu .primary ul li a:hover {
 }
 
 main .MainMenu .primary ul li a.active {
-	background: rgba(255, 255, 255, 0.9);
-	color: #a20015;
+	background: #a20015;
+	color: #fff;
 }
 
 .SubMenu {
