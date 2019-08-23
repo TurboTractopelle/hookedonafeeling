@@ -7,3 +7,18 @@ Hp sans menu, auth
 
 Menu haut statique
 Menu Latéral à 2 niveaux 
+
+
+Projets
+// New project
+
+// Your Projects
+// Shared with you
+// Deleted Projects
+// Folders
+// a (0)
+// New Folder
+
+
+Ar
+

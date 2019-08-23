@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import SubMenu from "../../components/SubMenu/SubMenu";
 
 export default class MainMenu extends Component {
 	render() {
@@ -8,20 +9,16 @@ export default class MainMenu extends Component {
 				<div className="primary">
 					<ul>
 						<li>
-							<NavLink to="/a">A</NavLink>
+							<NavLink to="/project" exact>
+								Projects
+							</NavLink>
 						</li>
 						<li>
-							<NavLink to="/b">B</NavLink>
+							<span className="link">Editor</span>
 						</li>
 					</ul>
 				</div>
-				{/*<div className="second">
-					<ul>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-					</ul>
-    </div>*/}
+				<SubMenu />
 			</div>
 		);
 	}

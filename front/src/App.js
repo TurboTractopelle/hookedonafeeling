@@ -1,5 +1,4 @@
 import React from "react";
-import List from "./containers/List";
 import "./App.css";
 import Header from "./components/Header/Header";
 import MainMenu from "./containers/MainMenu/MainMenu";

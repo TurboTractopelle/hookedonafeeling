@@ -1,5 +1,5 @@
 body {
-	background-color: #e6e6e6;
+	background-color: #e6e6e6; /* e6e6e6*/
 	color: #fff;
 }
 
@@ -55,7 +55,7 @@ main .MainMenu > div {
 }
 
 main .MainMenu .primary {
-	background: #333;
+	background: #222;
 }
 
 main .MainMenu .primary ul {
@@ -63,7 +63,8 @@ main .MainMenu .primary ul {
 	flex-direction: column;
 }
 
-main .MainMenu .primary ul li a {
+main .MainMenu .primary ul li a,
+main .MainMenu .primary ul li .link {
 	display: inline-block;
 	font-size: 2rem;
 	background: rgba(0, 0, 0, 0.5);
@@ -80,6 +81,15 @@ main .MainMenu .primary ul li a:hover {
 main .MainMenu .primary ul li a.active {
 	background: rgba(255, 255, 255, 0.9);
 	color: #a20015;
+}
+
+.SubMenu {
+	background: #333;
+}
+
+.content {
+	flex: 1;
+	padding: 1rem;
 }
 
 ul {
